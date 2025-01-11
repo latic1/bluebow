@@ -57,18 +57,18 @@ export default function Home() {
           </div>
         </section>
         <Services />
-        <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
-          <h3 className="text-5xl font-semibold">
+        <section className="container mx-auto my-20 py-24 bg-sky-500 rounded-lg text-center">
+          <h3 className="text-5xl font-semibold text-white">
             Ready to Elevate Your Business?
           </h3>
-          <p className="mt-8 text-xl font-light">
+          <p className="mt-8 text-xl font-light text-white">
             Unlock your potential with solutions designed to streamline
             operations, drive growth, and create lasting success.
           </p>
           <p className="mt-8">
             <button
               type="button"
-              className="py-5 px-16 text-lg bg-sky-500 hover:bg-sky-600 rounded text-white"
+              className="py-5 px-16 text-lg bg-black rounded text-white"
             >
               Get Started Today
             </button>
