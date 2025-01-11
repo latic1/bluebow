@@ -219,18 +219,23 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="text-gray-600 body-font bg-blue-400">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-            <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900">
-              Slow-carb next level shoindxgoitch ethical authentic, scenester
-              sriracha forage.
-            </h1>
-            <button className="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
-              contact us
-            </button>
-          </div>
-        </div>
+      <section className="container mx-auto my-20 py-24 bg-sky-500 rounded-lg text-center">
+        <h3 className="text-5xl font-semibold text-white">
+          Ready to Elevate Your Business?
+        </h3>
+        <p className="mt-8 text-xl font-light text-white">
+          Unlock your potential with solutions designed to streamline
+          operations, drive growth, and create lasting success.
+        </p>
+        <p className="mt-8">
+          
+          <button
+            type="button"
+            className="py-5 px-16 text-lg bg-black rounded text-white"
+          >
+            Get Started Today
+          </button>
+        </p>
       </section>
     </div>
   );
