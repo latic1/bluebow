@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Page = () => {
@@ -228,13 +229,14 @@ const Page = () => {
           operations, drive growth, and create lasting success.
         </p>
         <p className="mt-8">
-          
-          <button
-            type="button"
-            className="py-5 px-16 text-lg bg-black rounded text-white"
-          >
-            Get Started Today
-          </button>
+          <Link href={"/contact"}>
+            <button
+              type="button"
+              className="py-5 px-16 text-lg bg-black rounded text-white"
+            >
+              Get Started Today
+            </button>
+          </Link>
         </p>
       </section>
     </div>

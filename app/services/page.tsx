@@ -29,7 +29,7 @@ const services = [
       maritime operations against unforeseen liabilities. Covering risks like third-party injury,
       pollution, and cargo damage, our P&I insurance provides peace of mind. Our team ensures
       you have the financial protection needed to maintain smooth operations.`,
-    imgSrc: "/img/jjhkjhk.jpeg",
+    imgSrc: "/img/vlad-deep-mCqi3MljC4E-unsplash.jpg",
     alt: "Insurance services in action",
   },
   {

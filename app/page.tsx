@@ -1,5 +1,6 @@
 import { Carousel } from "@/components/carousel";
 import { Services } from "@/components/servicees";
+import Link from "next/link";
 // import Image from "next/image";
 
 export default function Home() {
@@ -50,30 +51,34 @@ export default function Home() {
             <div>
               <img
                 className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-                src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                src="/img/hero11.jpeg"
                 alt=""
               />
             </div>
           </div>
         </section>
         <Services />
-        <section className="container mx-auto my-20 py-24 bg-sky-500 rounded-lg text-center">
-          <h3 className="text-5xl font-semibold text-white">
-            Ready to Elevate Your Business?
-          </h3>
-          <p className="mt-8 text-xl font-light text-white">
-            Unlock your potential with solutions designed to streamline
-            operations, drive growth, and create lasting success.
-          </p>
-          <p className="mt-8">
-            <button
-              type="button"
-              className="py-5 px-16 text-lg bg-black rounded text-white"
-            >
-              Get Started Today
-            </button>
-          </p>
+        <section className="container mx-auto my-20 py-20 bg-sky-500 rounded-lg text-center">
+            <h3 className="text-5xl font-semibold text-white">
+              Ready to Elevate Your Business?
+            </h3>
+            <p className="mt-8 text-xl font-light text-white">
+              Unlock your potential with solutions designed to streamline
+              operations, drive growth, and create lasting success.
+            </p>
+            <p className="mt-8">
+              <Link href={"/contact"}>
+                {" "}
+                <button
+                  type="button"
+                  className="py-4 px-10 text-lg bg-black rounded text-white"
+                >
+                  Get Started Today
+                </button>
+              </Link>
+            </p>
         </section>
+
       </main>
     </div>
   );

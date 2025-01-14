@@ -16,7 +16,8 @@ export const Services = () => {
           Seamless Solutions for Every Maritime Need
         </h2>
         <p className="text-base text-gray-700 md:text-lg">
-          From reliable shipping to comprehensive insurance, we deliver tailored solutions to simplify your operations and drive success.
+          From reliable shipping to comprehensive insurance, we deliver tailored
+          solutions to simplify your operations and drive success.
         </p>
       </div>
 
@@ -38,13 +39,13 @@ export const Services = () => {
             title: "P&I Insurance",
             description:
               "Comprehensive protection against maritime liabilities, offering you peace of mind and secure operations.",
-            imgUrl: "/img/slied1.jpg",
+            imgUrl: "/img/vlad-deep-mCqi3MljC4E-unsplash.jpg",
           },
           {
             title: "Logistics",
             description:
               "End-to-end logistics management tailored to your needs, enabling you to focus on scaling your business.",
-            imgUrl: "/img/slied1.jpg",
+            imgUrl: "/img/Logisticsimg.jpeg",
           },
         ].map((service, index) => (
           <div

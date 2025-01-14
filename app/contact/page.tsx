@@ -48,7 +48,7 @@ const page = () => {
               className="absolute inset-0"
               title="map"
               loading="lazy"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4060022.011211191!2d-9.4524274!3d6.41135335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf09f803d4a9fcc1%3A0x7fd3286b32d16373!2sLiberia!5e0!3m2!1sen!2sgh!4v1736617279122!5m2!1sen!2sgh"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63444.46723854464!2d-10.829543274195577!3d6.357895524608252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf09f9c2aea20d0d%3A0x28f7876242d5b145!2sBushrod%20Island!5e0!3m2!1sen!2sgh!4v1736857337319!5m2!1sen!2sgh"
             ></iframe>
 
             <div className="relative flex flex-wrap rounded bg-white py-6 shadow-md">
@@ -57,8 +57,7 @@ const page = () => {
                   ADDRESS
                 </h2>
                 <p className="mt-1">
-                  Photo booth tattooed prism, portland taiyaki hoodie neutra
-                  typewriter
+                  BUSHROD ISLAND, FREEPORT. OPP. THE MAIN GATE, MONRO{" "}
                 </p>
               </div>
               <div className="mt-4 px-6 lg:mt-0 lg:w-1/2">
@@ -66,12 +65,12 @@ const page = () => {
                   EMAIL
                 </h2>
                 <a className="leading-relaxed text-blue-500">
-                  example@email.com
+                  pkppateh@gmail.com{" "}
                 </a>
                 <h2 className="title-font mt-4 text-xs font-semibold tracking-widest text-gray-900">
                   PHONE
                 </h2>
-                <p className="leading-relaxed">123-456-7890</p>
+                <p className="leading-relaxed">0770444450</p>
               </div>
             </div>
           </div>
