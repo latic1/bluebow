@@ -1,6 +1,5 @@
 // import Image from "next/image";
 
-import { div } from "framer-motion/client";
 
 export const Services = () => {
   return (
