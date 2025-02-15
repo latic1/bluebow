@@ -59,7 +59,7 @@ const Page = () => {
           <div>
             <img
               className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-              src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+              src="/img/wef.JPG"
               alt=""
             />
           </div>
@@ -204,17 +204,17 @@ const Page = () => {
           <div className="grid grid-cols-2 gap-5">
             <img
               className="object-cover w-full h-56 col-span-2 rounded shadow-lg"
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src="/img/rfref.JPG"
               alt=""
             />
             <img
               className="object-cover w-full h-48 rounded shadow-lg"
-              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src="/img/b392ac82-5ac6-4914-b471-1603d2744fee.JPG"
               alt=""
             />
             <img
               className="object-cover w-full h-48 rounded shadow-lg"
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src="/img/dkfghfd.JPG"
               alt=""
             />
           </div>
