@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pt-[90px]">
+    <div className="">
       <div className="relative h-[320px] w-full overflow-hidden">
         <div className="absolute inset-0">
           <Image
