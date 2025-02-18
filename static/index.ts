@@ -10,7 +10,7 @@ export const slides = [
       details: "Our deep understanding of international and local maritime regulations ensures seamless operations.",
     },
     {
-      image: "/img/slied2.jpg",
+      image: "/img/wef.JPG",
       header: "Committed to Safety and Excellence",
       details: "With our experienced team, we guarantee reliable, secure, and efficient maritime services worldwide.",
 
