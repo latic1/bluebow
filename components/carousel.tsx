@@ -25,7 +25,7 @@ export const Carousel = () => {
             key={index}
             className="embla__slide relative flex h-[30rem] items-center justify-start lg:h-[45rem]"
           >
-            <div className="absolute z-20 flex h-full flex-col items-center justify-center p-10 text-center text-white sm:px-24 md:w-2/3 md:text-left">
+            <div className="absolute z-20 flex h-full flex-col items-center justify-center  p-10 text-center text-white sm:px-24 md:w-2/3 md:text-left">
               <h1 className="mb-2 text-3xl font-black sm:text-3xl lg:text-6xl">
                 {slide.header}
               </h1>

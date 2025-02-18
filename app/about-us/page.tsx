@@ -2,6 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn more about Blue Bow Maritime LIB, our mission, vision, and why we are a trusted maritime services provider in Liberia and beyond.",
+};
+
 const Page = () => {
   return (
     <div className="">
@@ -10,8 +18,7 @@ const Page = () => {
           <Image
             src="/img/container-vessel-4989914_1280.jpg"
             alt="Container Vessel at Sea"
-            layout="fill"
-            objectFit="cover"
+            fill
             priority
             className="h-full w-full object-cover"
           />
@@ -39,7 +46,7 @@ const Page = () => {
               {/* <h2 className="max-w-lg mt-5 mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                 We are the leading maritime services provider based in Liberia.
               </h2> */}
-              <p className="mt-4 text-base text-gray-700 md:text-lg leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 Founded and based in Liberia, Blue Bow Maritime LIB is a trusted
                 partner in the maritime industry. We offer a wide range of
                 services tailored to meet the unique needs of the global
@@ -60,7 +67,7 @@ const Page = () => {
             <img
               className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
               src="/img/wef.JPG"
-              alt=""
+              alt="Blue Bow Maritime LIB team at work"
             />
           </div>
         </div>
@@ -232,9 +239,9 @@ const Page = () => {
           <Link href={"/contact"}>
             <button
               type="button"
-              className="py-5 px-16 text-lg bg-black rounded text-white"
+              className="py-5 px-16 text-lg bg-black rounded text-white transition duration-300 hover:bg-gray-800 hover:scale-105 active:scale-95 shadow-lg"
             >
-              Get Started Today
+              Get in Touch
             </button>
           </Link>
         </p>

@@ -14,19 +14,19 @@ function Navbar() {
     <header className="sticky top-0 bg-white shadow z-50">
       <div className="container flex justify-between items-center mx-auto py-4 px-8">
         <div className="flex items-center text-2xl">
-          <div className="w-12 mr-3">
-            <Link href={"/"}>
+          <Link href={"/"} className="flex items-center text-2xl font-bold">
+            <div className="w-16 mr-3">
               {" "}
               <Image
                 src="/img/logo.jpeg"
-                width={80}
-                height={80}
+                width={150}
+                height={150}
                 alt="Blue Bow Maritime Agency Logo"
                 className="w-16 h-auto"
               />
-            </Link>
-          </div>
-          <span className="hidden sm:block">Blue Bow Maritime Agency</span>
+            </div>
+            <span className="hidden sm:block text-blue-900">Blue Bow Maritime Agency</span>{" "}
+          </Link>
         </div>
 
         {/* Hamburger Icon */}

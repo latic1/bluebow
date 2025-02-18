@@ -1,6 +1,12 @@
 import ServiceCard from "@/components/ServiceCard";
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Service",
+  description: "",
+};
 
 const services = [
   {
@@ -53,27 +59,26 @@ const ServicesPage = () => {
           <Image
             src="/img/container-vessel-4989914_1280.jpg"
             alt="Container Vessel at Sea"
-            layout="fill"
-            objectFit="cover"
+            fill
             className="h-full w-full object-cover"
           />
           <div
             className="absolute inset-0 bg-black/60"
-            aria-hidden="true"
+            aria-label="Dark overlay for readability"
           ></div>
         </div>
-        <div className="container absolute inset-9 z-10 mx-auto flex flex-col items-center justify-between md:flex-row">
+        <header className="container absolute inset-9 z-10 mx-auto flex flex-col items-center justify-between md:flex-row">
           <div className="mb-4 md:mb-0 md:w-1/2">
             <h1 className="mb-2 text-4xl font-semibold leading-tight text-white md:text-5xl">
               Services
             </h1>
           </div>
-        </div>
+        </header>
       </div>
       <section className="bg-white py-10 sm:py-16 lg:py-24">
         <div className="mx-auto max-w-7xl space-y-10 px-4 sm:space-y-14 sm:px-6 lg:space-y-20 lg:px-8">
           {services.map((service, index) => (
-            <ServiceCard key={index} service={service} index={index} />
+            <ServiceCard key={service.title} service={service} index={index} />
           ))}
         </div>
       </section>

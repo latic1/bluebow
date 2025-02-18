@@ -1,7 +1,7 @@
 import { Carousel } from "@/components/carousel";
 import { Services } from "@/components/servicees";
+import Image from "next/image";
 import Link from "next/link";
-// import Image from "next/image";
 
 export default function Home() {
   return (
@@ -49,36 +49,37 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <img
+              <Image
                 className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
                 src="/img/hero11.jpeg"
                 alt=""
+                height={224}
+                width={400}
               />
             </div>
           </div>
         </section>
         <Services />
         <section className="container mx-auto my-20 py-20 bg-sky-500 rounded-lg text-center">
-            <h3 className="text-5xl font-semibold text-white">
-              Ready to Elevate Your Business?
-            </h3>
-            <p className="mt-8 text-xl font-light text-white">
-              Unlock your potential with solutions designed to streamline
-              operations, drive growth, and create lasting success.
-            </p>
-            <p className="mt-8">
-              <Link href={"/contact"}>
-                {" "}
-                <button
-                  type="button"
-                  className="py-4 px-10 text-lg bg-black rounded text-white"
-                >
-                  Get Started Today
-                </button>
-              </Link>
-            </p>
+          <h3 className="text-5xl font-semibold text-white">
+            Ready to Elevate Your Business?
+          </h3>
+          <p className="mt-8 text-xl font-light text-white">
+            Unlock your potential with solutions designed to streamline
+            operations, drive growth, and create lasting success.
+          </p>
+          <p className="mt-8">
+            <Link href={"/contact"}>
+              {" "}
+              <button
+                type="button"
+                className="py-5 px-16 text-lg bg-black rounded text-white transition duration-300 hover:bg-gray-800 hover:scale-105 active:scale-95 shadow-lg"
+              >
+                Get in Touch
+              </button>
+            </Link>
+          </p>
         </section>
-
       </main>
     </div>
   );
