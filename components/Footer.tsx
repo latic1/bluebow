@@ -44,7 +44,9 @@ export function Footer() {
               </span>
             </Link>
             <p className="max-w-md text-gray-300">
-              Blue Bow Maritime Liberia Ltd provides expert shipping, stevedoring, P&I insurance, and logistics solutions, ensuring efficiency and reliability for all your maritime needs.
+              Blue Bow Maritime Liberia Ltd provides expert shipping,
+              stevedoring, P&I insurance, and logistics solutions, ensuring
+              efficiency and reliability for all your maritime needs.
             </p>
           </div>
 
@@ -105,8 +107,9 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 py-6 text-center text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} Blue Bow Maritime Liberia. All rights reserved. Made with{" "}
-          <span className="text-red-500">♥</span> by{" "}
+          &copy; {new Date().getFullYear()} Blue Bow Maritime Liberia. All
+          rights reserved.
+          {/* <span className="text-red-500">♥</span> by{" "}
           <a
             href="https://linkedin.com/in/musah-latif"
             target="_blank"
@@ -114,7 +117,7 @@ export function Footer() {
             className="hover:text-blue-500 transition-colors duration-200"
           >
             HHY
-          </a>
+          </a> */}
           .
         </div>
       </Container>
