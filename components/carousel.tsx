@@ -15,7 +15,7 @@ export const Carousel = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="embla__slide relative flex h-[30rem] items-center justify-start lg:h-[45rem]"
+            className="embla__slide relative flex h-[30rem] items-center justify-start lg:h-[45rem] "
           >
             {/* Overlay Content */}
             <div className="absolute z-20 flex h-full flex-col items-center justify-center p-10 text-center text-white sm:px-24 md:w-2/3 md:text-left">

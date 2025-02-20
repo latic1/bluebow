@@ -4,119 +4,120 @@ import React from "react";
 import { Container } from "@/components/Container";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
+const navigation = [
+  { title: "Home", href: "/" },
+  { title: "About", href: "/about-us" },
+  { title: "Services", href: "/services" },
+  { title: "Contact", href: "/contact" },
+];
+
+const legal = [
+  { title: "Terms", href: "/terms" },
+  { title: "Privacy", href: "/privacy" },
+  { title: "Legal", href: "/legal" },
+];
+
+const socialLinks = [
+  { href: "https://twitter.com", label: "Twitter", icon: Twitter },
+  { href: "https://facebook.com", label: "Facebook", icon: Facebook },
+  { href: "https://instagram.com", label: "Instagram", icon: Instagram },
+  { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
+];
+
 export function Footer() {
-  const navigation = [
-    { title: "Home", link: "/" },
-    { title: "About", link: "/about-us" },
-    { title: "Service", link: "/services" },
-    { title: "Contact", link: "/contact" },
-  ];
-  const legal = ["Terms", "Privacy", "Legal"];
-
   return (
-    <div className="relative bg-black">
+    <footer className="bg-black text-white">
       <Container>
-        <div className="mx-auto mt-5 grid max-w-screen-xl grid-cols-1 gap-10 pt-10 lg:grid-cols-5">
-          <div className="lg:col-span-2">
-            <div>
-              <Link
-                href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-white"
-              >
-                <Image
-                  src="/img/logo.jpeg"
-                  alt="Blue Bow Maritime Agency Liberia"
-                  width="32"
-                  height="32"
-                  className="w-24"
-                />
-                {/* <span>Blue Bow Maritime Agency</span> */}
-              </Link>
-            </div>
-
-            <div className="mt-4 max-w-md text-white">
-              Our marine services business specializes in providing
-              comprehensive shipping solutions, efficient stevedoring services,
-              and reliable P&I insurance coverage for all your maritime needs.
-            </div>
+        <div className="grid grid-cols-1 gap-8 py-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
+          {/* Company Info */}
+          <div className="space-y-6 lg:col-span-2">
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/img/logo.jpeg"
+                alt="Blue Bow Maritime Liberia Logo"
+                width={96}
+                height={96}
+                className="h-16 w-16 object-contain"
+              />
+              <span className="text-2xl font-bold hidden sm:inline">
+                Blue Bow Maritime
+              </span>
+            </Link>
+            <p className="max-w-md text-gray-300">
+              Blue Bow Maritime Liberia Ltd provides expert shipping, stevedoring, P&I insurance, and logistics solutions, ensuring efficiency and reliability for all your maritime needs.
+            </p>
           </div>
 
+          {/* Navigation Links */}
           <div>
-            <div className="-ml-3 -mt-2 flex w-full flex-wrap lg:ml-0">
-              {navigation.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.link}
-                  className="w-full rounded-md px-4 py-2 text-white hover:text-blue-500 focus:bg-blue-100 focus:text-blue-500 focus:outline-none"
-                >
-                  {item.title}
-                </Link>
+            <h3 className="mb-4 text-lg font-semibold">Explore</h3>
+            <ul className="space-y-3">
+              {navigation.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-blue-500 transition-colors duration-200"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
+
+          {/* Legal Links */}
           <div>
-            <div className="-ml-3 -mt-2 flex w-full flex-wrap lg:ml-0">
-              {legal.map((item, index) => (
-                <Link
-                  key={index}
-                  href={`/${item.toLowerCase()}`}
-                  className="w-full rounded-md px-4 py-2 text-white hover:text-blue-500 focus:bg-blue-100 focus:text-blue-500 focus:outline-none"
-                >
-                  {item}
-                </Link>
+            <h3 className="mb-4 text-lg font-semibold">Legal</h3>
+            <ul className="space-y-3">
+              {legal.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-blue-500 transition-colors duration-200"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-          <div className="text-white">
-            <div>Follow us</div>
-            <div className="mt-5 flex space-x-5">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-              >
-                <Twitter />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <Facebook />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <Instagram />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <Linkedin />
-              </a>
-            </div>
+
+          {/* Social Media */}
+          <div>
+            <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
+            <ul className="flex gap-4">
+              {socialLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                    className="text-gray-300 hover:text-blue-500 transition-colors duration-200"
+                  >
+                    <link.icon className="h-6 w-6" />
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div className="py-10 text-center text-sm text-white">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <Link
+        {/* Copyright */}
+        <div className="border-t border-gray-800 py-6 text-center text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} Blue Bow Maritime Liberia. All rights reserved. Made with{" "}
+          <span className="text-red-500">♥</span> by{" "}
+          <a
             href="https://linkedin.com/in/musah-latif"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:text-blue-500 transition-colors duration-200"
           >
-            HHY.
-          </Link>
+            HHY
+          </a>
+          .
         </div>
       </Container>
-    </div>
+    </footer>
   );
 }

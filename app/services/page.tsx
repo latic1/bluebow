@@ -4,84 +4,78 @@ import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Service",
-  description: "",
+  title: "Our Services | Blue Bow Maritime Liberia",
+  description:
+    "Explore Blue Bow Maritime Liberia’s expert services—Stevedoring, Shipping, P&I Insurance, and Logistics—designed for efficiency, safety, and reliability.",
 };
 
 const services = [
   {
     title: "Stevedoring",
-    description: `Our expert stevedoring services streamline cargo handling,
-      reducing turnaround times and ensuring the secure and efficient transfer of goods.
-      Using advanced equipment and proven handling methods, we cater to all cargo types—whether
-      bulk, breakbulk, or containerized. Our highly trained stevedores work in line with strict
-      safety protocols to optimize dockside operations, helping you meet tight schedules and
-      maintain a seamless workflow at the port.`,
+    description: `Our expert stevedoring services streamline cargo handling, reducing turnaround times and ensuring secure, efficient transfers. Using advanced equipment and proven methods, we manage bulk, breakbulk, and containerized cargo with precision. Our trained stevedores follow strict safety protocols to optimize dockside operations, keeping your port workflow seamless and on schedule.`,
     imgSrc: "/img/jjhkjhk.jpeg",
-    alt: "Stevedoring services in action",
+    alt: "Stevedoring team loading cargo at the port",
   },
   {
     title: "Shipping",
-    description: `With our comprehensive shipping solutions, we prioritize punctuality, reliability,
-      and cargo safety. We coordinate every stage of the shipping process to ensure your cargo
-      arrives on schedule and in pristine condition. From navigating complex logistics to handling
-      customs compliance, we tailor our services to meet the specific demands of each shipment.`,
+    description: `Our comprehensive shipping solutions prioritize punctuality, reliability, and cargo safety. We oversee every step—from logistics coordination to customs compliance—ensuring your cargo arrives on time and intact. Tailored to each shipment’s needs, our services deliver efficiency and peace of mind across the globe.`,
     imgSrc: "/img/Shippingimg.jpeg",
-    alt: "Shipping services in action",
+    alt: "Shipping vessel transporting cargo across the sea",
   },
   {
     title: "P&I Insurance",
-    description: `We offer comprehensive Protection & Indemnity (P&I) insurance to safeguard your
-      maritime operations against unforeseen liabilities. Covering risks like third-party injury,
-      pollution, and cargo damage, our P&I insurance provides peace of mind. Our team ensures
-      you have the financial protection needed to maintain smooth operations.`,
+    description: `Our Protection & Indemnity (P&I) insurance safeguards your maritime operations against risks like third-party injuries, pollution, and cargo damage. With tailored coverage and expert support, we provide the financial security you need to operate confidently and maintain smooth workflows.`,
     imgSrc: "/img/vlad-deep-mCqi3MljC4E-unsplash.jpg",
-    alt: "Insurance services in action",
+    alt: "P&I insurance support for maritime operations",
   },
   {
     title: "Logistics",
-    description: `Our end-to-end logistics solutions simplify and streamline your supply chain,
-      allowing you to focus on growth. From warehousing and inventory to final-mile delivery,
-      we support your business objectives with transparent tracking, efficient routing, and
-      strategic planning.`,
+    description: `Our end-to-end logistics solutions simplify your supply chain, from warehousing and inventory management to final-mile delivery. With transparent tracking, efficient routing, and strategic planning, we enhance operational efficiency and support your business growth.`,
     imgSrc: "/img/Logisticsimg.jpeg",
-    alt: "Logistics services in action",
+    alt: "Logistics team managing supply chain operations",
   },
 ];
 
 const ServicesPage = () => {
   return (
-    <div className="  w-full">
-      {" "}
-      {/* Adjust top padding based on navbar height */}
-      <div className="relative h-[320px] w-full overflow-hidden">
+    <div className="w-full text-gray-900">
+      {/* Hero Section */}
+      <section className="relative h-[320px] w-full overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/img/container-vessel-4989914_1280.jpg"
-            alt="Container Vessel at Sea"
+            alt="Container Vessel Navigating Open Waters"
             fill
             className="h-full w-full object-cover"
           />
-          <div
-            className="absolute inset-0 bg-black/60"
-            aria-label="Dark overlay for readability"
-          ></div>
+          <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
         </div>
-        <header className="container absolute inset-9 z-10 mx-auto flex flex-col items-center justify-between md:flex-row">
-          <div className="mb-4 md:mb-0 md:w-1/2">
-            <h1 className="mb-2 text-4xl font-semibold leading-tight text-white md:text-5xl">
-              Services
-            </h1>
-          </div>
-        </header>
-      </div>
-      <section className="bg-white py-10 sm:py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl space-y-10 px-4 sm:space-y-14 sm:px-6 lg:space-y-20 lg:px-8">
-          {services.map((service, index) => (
-            <ServiceCard key={service.title} service={service} index={index} />
-          ))}
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <h1 className="text-4xl font-semibold text-white md:text-5xl">
+            Our Services
+          </h1>
         </div>
       </section>
+
+      {/* Services Section */}
+      <main className="bg-white py-12 sm:py-16 lg:py-24">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <header className="mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Comprehensive Maritime Solutions
+            </h2>
+            <p className="mt-4 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              At Blue Bow Maritime Liberia, we deliver specialized services tailored to your needs,
+              ensuring efficiency, safety, and reliability every step of the way.
+            </p>
+          </header>
+          <div className="space-y-16 sm:space-y-20 lg:space-y-24">
+            {services.map((service, index) => (
+              <ServiceCard key={service.title} service={service} index={index} />
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 };

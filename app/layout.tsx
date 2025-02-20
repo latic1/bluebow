@@ -1,7 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";import "./globals.css";
 import Navbar from "@/components/nav-bar";
 import { Footer } from "@/components/Footer";
+import type { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,39 +15,55 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-export const metadata = {
-  title: "Blue Bow Maritime LIB",
+export const metadata: Metadata = {
+  title: {
+    default: "Blue Bow Maritime Liberia",
+    template: "%s | Blue Bow Maritime Liberia",
+  },
   description:
-    "We specialize in offering a comprehensive range of services that include shipping, stevedoring, P&I insurance, and marine operations.",
+    "Blue Bow Maritime Liberia Ltd offers expert maritime services, including shipping, stevedoring, P&I insurance, and logistics, delivering efficiency and reliability worldwide.",
   icons: {
     icon: "/img/favicon.ico",
   },
   openGraph: {
-    title: "Blue Bow Maritime LIB",
+    title: "Blue Bow Maritime Liberia",
     description:
-      "Comprehensive maritime services including shipping, stevedoring, and marine operations.",
+      "Discover our comprehensive maritime services—shipping, stevedoring, P&I insurance, and logistics—tailored for safety and efficiency.",
     url: "https://www.bluebowmaritimelib.com",
-    siteName: "Blue Bow Maritime LIB",
+    siteName: "Blue Bow Maritime Liberia",
     images: [
       {
         url: "/img/logo.jpeg",
         width: 1200,
         height: 630,
-        alt: "Blue Bow Maritime LIB Logo",
+        alt: "Blue Bow Maritime Liberia Logo",
       },
     ],
     type: "website",
   },
-  robots: "index, follow",
+  twitter: {
+    card: "summary_large_image",
+    title: "Blue Bow Maritime Liberia",
+    description:
+      "Expert maritime services: shipping, stevedoring, P&I insurance, and logistics.",
+    images: ["/img/logo.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    >
+      <body className="flex flex-col min-h-screen">
         <Navbar />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
