@@ -24,7 +24,7 @@ export const Carousel = () => {
               </h1>
               <p className="mb-2 font-semibold md:text-xl">{slide.details}</p>
               <div className="mt-5 w-full">
-                <Link href="/contact-us">
+                <Link href="/contact">
                   <button className="flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-black transition hover:bg-gray-200">
                     Contact Us <ChevronRightIcon />
                   </button>
