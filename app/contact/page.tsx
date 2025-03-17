@@ -2,10 +2,37 @@ import Image from "next/image";
 import React from "react";
 import type { Metadata } from "next";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "Contact Us | Blue Bow Maritime Liberia",
+  title: "Contact Us",
   description:
-    "Reach out to Blue Bow Maritime Liberia Ltd for inquiries about our maritime services—Stevedoring, Shipping, P&I Insurance, and Logistics. We’re here to assist you.",
+    "Contact Blue Bow Maritime Liberia for expert Stevedoring, Shipping, P&I Insurance, and Logistics services. Get in touch today!",
+  openGraph: {
+    title: "Contact Us | Blue Bow Maritime Liberia",
+    description:
+      "Contact Blue Bow Maritime Liberia for expert Stevedoring, Shipping, P&I Insurance, and Logistics services. Get in touch today!",
+    url: `${siteUrl}/contact/`,
+    siteName: "Blue Bow Maritime Liberia",
+    images: [
+      {
+        url: "/img/slide1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Blue Bow Maritime Liberia contact page",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | Blue Bow Maritime Liberia",
+    description:
+      "Contact Blue Bow Maritime Liberia for expert Stevedoring, Shipping, P&I Insurance, and Logistics services. Get in touch today!",
+    images: ["/img/slide1.jpg"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/contact/`,
+  },
 };
 
 const ContactPage = () => {

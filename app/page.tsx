@@ -1,14 +1,41 @@
 import { Carousel } from "@/components/carousel";
-import { Services } from "@/components/servicees";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+import { Services } from "@/components/services";
+
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Welcome to Blue Bow Maritime Liberia—your trusted partner for innovative maritime solutions in Liberia and beyond.",
+  openGraph: {
+    title: "Blue Bow Maritime Liberia | Home",
+    description:
+      "Welcome to Blue Bow Maritime Liberia—your trusted partner for innovative maritime solutions in Liberia and beyond.",
+    images: [
+      {
+        url: "/img/hero11.jpeg", 
+        width: 1200,
+        height: 630,
+        alt: "Blue Bow Maritime Liberia Operations",
+      },
+    ],
+  },
+  twitter: {
+    images: ["/img/hero11.jpeg"],
+  },
+};
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="min-h-screen">
       <main className="text-gray-900">
         <Carousel />
-        <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:px-6 lg:px-8 lg:py-20">
           <div className="grid gap-12 row-gap-8 lg:grid-cols-2">
             <div className="flex flex-col justify-center">
               <div className="max-w-xl mb-6">
@@ -47,19 +74,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="relative w-full h-56 sm:h-96">
               <Image
-                className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
                 src="/img/hero11.jpeg"
                 alt="Blue Bow Maritime Operations"
-                height={224}
-                width={400}
+                fill
+                className="object-cover rounded shadow-lg"
               />
             </div>
           </div>
         </section>
         <Services />
-        <section className="container mx-auto my-20 py-20 bg-sky-500 rounded-lg text-center">
+        <section className="container mx-auto max-w-7xl my-20 py-20 bg-sky-500 rounded-lg text-center">
           <h3 className="text-5xl font-semibold text-white">
             Ready to Transform Your Maritime Operations?
           </h3>
@@ -68,9 +94,10 @@ export default function Home() {
             and ensure long-term success in the maritime industry.
           </p>
           <p className="mt-8">
-            <Link href={"/contact"}>
+            <Link href="/contact"> 
               <button
                 type="button"
+                aria-label="Contact Blue Bow Maritime Liberia"
                 className="py-5 px-16 text-lg bg-black rounded text-white transition duration-300 hover:bg-gray-800 hover:scale-105 active:scale-95 shadow-lg"
               >
                 Contact Us Today

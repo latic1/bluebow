@@ -3,10 +3,40 @@ import Image from "next/image";
 import React from "react";
 import type { Metadata } from "next";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+
+
+
 export const metadata: Metadata = {
-  title: "Our Services | Blue Bow Maritime Liberia",
+  title: "Our Services",
   description:
-    "Explore Blue Bow Maritime Liberia’s expert services—Stevedoring, Shipping, P&I Insurance, and Logistics—designed for efficiency, safety, and reliability.",
+    "Explore Blue Bow Maritime Liberia's expert services—Stevedoring, Shipping, P&I Insurance, and Logistics—delivering efficiency and reliability in Liberia and beyond.",
+  openGraph: {
+    title: "Blue Bow Maritime Liberia | Our Services",
+    description:
+      "Explore Blue Bow Maritime Liberia's expert services—Stevedoring, Shipping, P&I Insurance, and Logistics—delivering efficiency and reliability in Liberia and beyond.",
+    url: `${siteUrl}/services/`,
+    siteName: "Blue Bow Maritime Liberia",
+    images: [
+      {
+        url: "/img/slide1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Blue Bow Maritime Liberia services overview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blue Bow Maritime Liberia | Our Services",
+    description:
+      "Explore Blue Bow Maritime Liberia's expert services—Stevedoring, Shipping, P&I Insurance, and Logistics—delivering efficiency and reliability in Liberia and beyond.",
+    images: ["/img/slide1.jpg"],
+  },
+  alternates: {
+    canonical: `${siteUrl}/services/`,
+  },
 };
 
 const services = [

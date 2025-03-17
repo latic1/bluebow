@@ -30,7 +30,7 @@ export const Services = () => {
               title: "Shipping",
               description:
                 "We provide fast, reliable shipping solutions to ensure your cargo reaches its destination on time, every time.",
-              imgUrl: "/img/slied1.jpg",
+              imgUrl: "/img/slide1.jpg",
             },
             {
               title: "Stevedoring",

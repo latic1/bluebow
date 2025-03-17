@@ -15,25 +15,27 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: {
     default: "Blue Bow Maritime Liberia",
     template: "%s | Blue Bow Maritime Liberia",
   },
   description:
-    "Blue Bow Maritime Liberia Ltd offers expert maritime services, including shipping, stevedoring, P&I insurance, and logistics, delivering efficiency and reliability worldwide.",
+    "Blue Bow Maritime Liberia Ltd provides trusted maritime solutions across Liberia and beyond.",
   icons: {
-    icon: "/img/favicon.ico",
+    icon: "/favicon.ico", 
   },
   openGraph: {
     title: "Blue Bow Maritime Liberia",
     description:
       "Discover our comprehensive maritime services—shipping, stevedoring, P&I insurance, and logistics—tailored for safety and efficiency.",
-    url: "https://www.bluebowmaritimelib.com",
+    url: siteUrl,
     siteName: "Blue Bow Maritime Liberia",
     images: [
       {
-        url: "/img/logo.jpeg",
+        url: `${siteUrl}/img/logo.jpeg`,
         width: 1200,
         height: 630,
         alt: "Blue Bow Maritime Liberia Logo",
@@ -46,13 +48,15 @@ export const metadata: Metadata = {
     title: "Blue Bow Maritime Liberia",
     description:
       "Expert maritime services: shipping, stevedoring, P&I insurance, and logistics.",
-    images: ["/img/logo.jpeg"],
+    images: [`${siteUrl}/img/logo.jpeg`],
   },
   robots: {
     index: true,
     follow: true,
   },
-  viewport: "width=device-width, initial-scale=1",
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
