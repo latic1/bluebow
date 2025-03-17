@@ -5,9 +5,6 @@ import type { Metadata } from "next";
 import { Services } from "@/components/services";
 
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
-
 export const metadata: Metadata = {
   title: "Home",
   description:
